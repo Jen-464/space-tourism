@@ -5,8 +5,8 @@
   --white: hsl(0, 0%, 100%);
 
   /* Typography */
-  font-family: "Bellefair", serif;
   letter-spacing: 0px;
+  color: var(--white);
 
   /* Space */
   --space-25: 2px;

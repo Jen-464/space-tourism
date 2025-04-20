@@ -72,11 +72,13 @@ span {
 
 @media (max-width: 860px) {
     header {
-        margin-top: var(--space-300);
+        margin-top: 0;
     }
 
     /* Left */
     img:first-child {
+        width: 40px;
+        height: 40px;
         margin: 0 var(--space-300);
     }
     img:last-child {
@@ -97,8 +99,8 @@ span {
         background-repeat: no-repeat;
         width: 3rem;
         aspect-ratio: 1;
-        top: 4rem;
-        right: 2rem;
+        top: 2.3rem;
+        right: 1rem;
         border: none;
     }
     .mobile-nav-toggle[aria-expanded="true"] {
