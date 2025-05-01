@@ -59,7 +59,7 @@ section {
     min-width: 450px;
     z-index: 1;
   }
-  main {
+  .home-main {
     position: relative;
     margin-top: 10vh;
     display: flex;

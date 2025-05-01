@@ -12,69 +12,69 @@ html, body {
 
 /* Home */
 .bg-home {
-    background-image: url("./assets/home/background-home-mobile.jpg");
+    background-image: url("/space-tourism/assets/home/background-home-mobile.jpg");
 }
   
 @media (min-width: 768px) {
     .bg-home {
-        background-image: url("./assets/home/background-home-tablet.jpg");
+        background-image: url("/space-tourism/assets/home/background-home-tablet.jpg");
     }
 }
 
 @media (min-width: 1024px) {
     .bg-home {
-        background-image: url("./assets/home/background-home-desktop.jpg");
+        background-image: url("/space-tourism/assets/home/background-home-desktop.jpg");
     }
 }
   
 /* Destination */
 .bg-destination {
-    background-image: url("./assets/destination/background-destination-mobile.jpg");
+    background-image: url("/space-tourism/assets/destination/background-destination-mobile.jpg");
 }
 
 @media (min-width: 768px) {
     .bg-destination {
-        background-image: url("./assets/destination/background-destination-tablet.jpg");
+        background-image: url("/space-tourism/assets/destination/background-destination-tablet.jpg");
     }
 }
 
 @media (min-width: 1024px) {
     .bg-destination {
-        background-image: url("./assets/destination/background-destination-desktop.jpg");
+        background-image: url("/space-tourism/assets/destination/background-destination-desktop.jpg");
     }
 }
 
 /* Crew */
 .bg-crew {
-    background-image: url("./assets/crew/background-crew-mobile.jpg");
+    background-image: url("/space-tourism/assets/crew/background-crew-mobile.jpg");
 }
 
 @media (min-width: 768px) {
     .bg-crew {
-        background-image: url("./assets/crew/background-crew-tablet.jpg");
+        background-image: url("/space-tourism/assets/crew/background-crew-tablet.jpg");
     }
 }
 
 @media (min-width: 1024px) {
     .bg-crew {
-        background-image: url("./assets/crew/background-crew-desktop.jpg");
+        background-image: url("/space-tourism/assets/crew/background-crew-desktop.jpg");
     }
 }
 
 /* Technology */
 .bg-technology {
-    background-image: url("./assets/technology/background-technology-mobile.jpg");
+    background-image: url("/space-tourism/assets/technology/background-technology-mobile.jpg");
 }
 
 @media (min-width: 768px) {
     .bg-technology {
-        background-image: url("./assets/technology/background-technology-tablet.jpg");
+        background-image: url("/space-tourism/assets/technology/background-technology-tablet.jpg");
     }
 }
 
 @media (min-width: 1024px) {
     .bg-technology {
-        background-image: url("./assets/technology/background-technology-desktop.jpg");
+        background-image: url("/space-tourism/assets/technology/background-technology-desktop.jpg");
     }
 }
 

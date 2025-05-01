@@ -22,7 +22,7 @@ header div {
     justify-content: space-between;
 }
 
-img:first-child {
+.logo-image {
     width: 48px;
     height: 48px;
     margin: 0 var(--space-800);
@@ -53,7 +53,7 @@ li:hover {
     border-bottom: 3px solid white;
 }
 
-a {
+nav a {
     color: var(--white);
     text-decoration: none;
 }
@@ -65,7 +65,7 @@ span {
 }
 
 @media (max-width: 1250px) {
-    img:last-child {
+    .line-image {
         display: none;
     }
 }
@@ -76,12 +76,12 @@ span {
     }
 
     /* Left */
-    img:first-child {
+    .logo-image {
         width: 40px;
         height: 40px;
         margin: 0 var(--space-300);
     }
-    img:last-child {
+    .line-image {
         display: none;
     }
 
@@ -95,7 +95,7 @@ span {
         display: block;
         position: absolute;
         z-index: 1;
-        background: url("../assets/shared/icon-hamburger.svg");
+        background: url("/space-tourism/assets/shared/icon-hamburger.svg");
         background-repeat: no-repeat;
         width: 3rem;
         aspect-ratio: 1;
@@ -104,7 +104,7 @@ span {
         border: none;
     }
     .mobile-nav-toggle[aria-expanded="true"] {
-        background: url("../assets/shared/icon-close.svg");
+        background: url("/space-tourism/assets/shared/icon-close.svg");
         background-repeat: no-repeat;
         width: 3rem;
         aspect-ratio: 1;
@@ -138,7 +138,7 @@ span {
         border-bottom: none;
         border-right: 3px solid white;
     }
-    a { 
+    nav a { 
         width: 100%;
     }
     

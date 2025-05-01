@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom"
 import { useState } from "react"
-import logo from "../assets/shared/logo.svg"
-import line from "../assets/shared/line.svg"
+import logoImg from "/assets/shared/logo.svg"
+import lineImg from "/assets/shared/line.svg"
 import "./Nav.css"
 
 const Nav = () => {
@@ -15,8 +15,8 @@ const Nav = () => {
         <>
             <header>
                 <div>
-                    <img src={logo} alt="space tourism star logo in white circle" />
-                    <img src={line} alt="literally just a line for aesthetic purposes" />
+                    <a href="/"><img src={logoImg} alt="space tourism star logo in white circle" className="logo-image"/></a>
+                    <img src={lineImg} alt="literally just a line for aesthetic purposes" className="line-image"/>
                 </div>
                 <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded={isNavVisible} onClick={toggleNav}>
                     <span className="sr-only">Menu</span>
