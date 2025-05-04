@@ -1,6 +1,6 @@
 const NotFound = () => {
     return (
-        <h1> wwwwww </h1>
+        <h1> Not Found </h1>
     )
 }
 

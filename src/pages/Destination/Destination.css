@@ -4,6 +4,37 @@
   padding: 30px 0;
 }
 
+.destination-tab {
+  list-style-type: none;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+.destination-tab a {
+  text-decoration: none;
+  color: var(--blue-300);
+}
+
+.destination-tab li {
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+
+.destination-tab .active li {
+  color: var(--white);
+  border-bottom: 3px solid white;
+}
+
+/* .destination-tab li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 50%);
+} */
+
+
+
+
 @media (min-width: 375px) {
   .top-content img {
     height: 380px;

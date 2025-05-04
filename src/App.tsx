@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom"
+import { Routes, Route, useLocation, Navigate } from "react-router-dom"
 import Nav from "./components/Nav"
 import Home from "./pages/Home/Home"
 import Destination from "./pages/Destination/Destination"
@@ -23,7 +23,12 @@ function App() {
       <Routes >
         <Route path="/" element={<Nav />}>
           <Route index element={<Home />} />
-          <Route path="destination" element={<Destination />} />
+
+          <Route path="destination" element={<Destination />}>
+            <Route index element={<Navigate to="moon" replace />}/>
+          </Route>
+          <Route path="destination/:moon" element={<Destination />} />
+
           <Route path="crew" element={<Crew />} />
           <Route path="technology" element={<Technology />}></Route>
         </Route>

@@ -44,7 +44,7 @@ const Home = () => {
                             because we’ll give you a truly out of this world experience! </p>
                     </div>
                     <div className="button-container">
-                        <NavLink to="/destination">
+                        <NavLink to="destination">
                             <button className={`${btnClassName} explore-btn`}>Explore</button>
                         </NavLink>
                     </div>

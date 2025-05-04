@@ -23,10 +23,10 @@ const Nav = () => {
                 </button>
                 <nav className={isNavVisible ? "nav-visible" : "nav-hidden"}>
                     <ul id="primary-navigation">
-                        <NavLink to="/" className={({ isActive }) => `barlow-condensed-8 ${isActive ? "active" : ""}`}><li> <span aria-hidden="true"> 00 </span> HOME </li></NavLink>
-                        <NavLink to="/destination" className="barlow-condensed-8"><li> <span aria-hidden="true"> 01 </span> DESTINATION </li></NavLink>
-                        <NavLink to="/crew" className="barlow-condensed-8"><li> <span aria-hidden="true"> 02 </span> CREW </li></NavLink>
-                        <NavLink to="/technology" className="barlow-condensed-8"><li> <span aria-hidden="true"> 03 </span> TECHNOLOGY</li></NavLink>
+                        <NavLink to="." className={({ isActive }) => `barlow-condensed-8 ${isActive ? "active" : ""}`}><li> <span aria-hidden="true"> 00 </span> HOME </li></NavLink>
+                        <NavLink to="destination" className="barlow-condensed-8"><li> <span aria-hidden="true"> 01 </span> DESTINATION </li></NavLink>
+                        <NavLink to="crew" className="barlow-condensed-8"><li> <span aria-hidden="true"> 02 </span> CREW </li></NavLink>
+                        <NavLink to="technology" className="barlow-condensed-8"><li> <span aria-hidden="true"> 03 </span> TECHNOLOGY</li></NavLink>
                     </ul>
                 </nav>
             </header>
