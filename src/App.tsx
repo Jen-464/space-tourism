@@ -24,9 +24,7 @@ function App() {
         <Route path="/" element={<Nav />}>
           <Route index element={<Home />} />
 
-          <Route path="destination" element={<Destination />}>
-            <Route index element={<Navigate to="moon" replace />}/>
-          </Route>
+          <Route path="/destination" element={<Navigate to="/destination/moon" replace />} />
           <Route path="destination/:moon" element={<Destination />} />
 
           <Route path="crew" element={<Crew />} />

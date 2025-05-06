@@ -5,6 +5,12 @@
   font-weight: 400; /* Leave as it bugs out if erased */
 }
 
+.mobile-preset-2 { 
+  font-family: "Bellefair", serif;
+  font-size: 3.5rem;
+  font-weight: 400; /* Leave as it bugs out if erased */
+}
+
 .mobile-preset-4 {
     font-family: "Bellefair", serif;
     font-size: 1.2rem;
@@ -20,14 +26,15 @@
 .mobile-preset-8 {
     font-family: "Barlow Condensed", sans-serif;
     font-size: .9rem;
-    letter-spacing: .15rem;
-
+    letter-spacing: 0.15rem;
+    color: var(--blue-300);
 }
 
 .mobile-preset-9 {
     font-family: "Barlow", sans-serif;
     font-size: 0.9rem;
     line-height: 180%;
+    color: var(--blue-300);
 }
 
 
@@ -59,13 +66,27 @@
     font-weight: 300;
 }
 
+.desktop-preset-6 {
+    font-family: "Bellefair", serif;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.desktop-preset-7 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: var(--blue-300);
+}
 
 /* Subpages */
-.subpage-sections {
+section {
     padding: 24px;
 }
 
-.subpage-sections main {
+main {
     text-align: center;
 }
 
@@ -87,7 +108,8 @@
     gap: 32px;
 }
 
-@media (min-width: 375px) {
+/* Tablet */
+@media (min-width: 768px) {
     .subpage-sections {
         padding: 40px;
     }
@@ -100,7 +122,8 @@
     }
 }
 
-@media (min-width: 768px) {
+/* Desktop */
+@media (min-width: 1440px) {
     .subpage-sections {
         padding: 48px 0;
     }

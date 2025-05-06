@@ -20,17 +20,17 @@ const Destination = () => {
         index = 0;
     }
 
-    const moon = data["destinations"][index];
-    console.log(location, moon);
+    const destination = data["destinations"][index];
+    console.log(location);
 
     return (
-        <section className="subpage-sections">
+        <section>
             <main>
                 <div className="page-title mobile-preset-6"> <span aria-hidden="true"> 01 </span> PICK YOUR DESTINATION </div>
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">
-                        <img src={moon.images.png} alt="Image of a moon" />
+                        <img src={destination.images.png} alt="Image of a moon" />
                     </div>
                     <div className="bottom-content">
                         <div className="destination-tab">
@@ -40,24 +40,21 @@ const Destination = () => {
                             <NavLink to="/destination/titan" className="mobile-preset-8"><li> TITAN </li></NavLink>
                         </div>
                         <div className="destination-tab-content">
-                            <div className="moon-text">
-                                <h1> {moon.name} </h1>
-                                {/* 16px gap here */}
-                                <p> {moon.description} </p>
+                            <div className="destination-text">
+                                <h1 className="mobile-preset-2"> {destination.name} </h1>
+                                <p className="mobile-preset-9"> {destination.description} </p>
                             </div>
 
-                            {/* 24px gap here */}
-                            <img src={lineImg} alt="literally just a line for aesthetic purposes" className="line-image" />
-                            {/* 24px gap here */}
+                            <img src={lineImg} alt="literally just a line for aesthetic purposes"/>
 
-                            <div className="moon-data">
+                            <div className="destination-data">
                                 <div className="distance">
-                                    <h2> AVG. TIME </h2>
-                                    <span>{moon.distance}</span>
+                                    <h2 className="desktop-preset-7"> AVG. TIME </h2>
+                                    <span className="desktop-preset-6">{destination.distance}</span>
                                 </div>
                                 <div className="travel">
-                                    <h2> EST. TRAVEL TIME </h2>
-                                    <span>{moon.travel}</span>
+                                    <h2 className="desktop-preset-7"> EST. TRAVEL TIME </h2>
+                                    <span className="desktop-preset-6">{destination.travel}</span>
                                 </div>
                             </div>
                         </div>

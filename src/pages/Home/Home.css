@@ -5,7 +5,6 @@ section {
 .text-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
 }
 
@@ -14,14 +13,7 @@ section {
   text-transform: uppercase;
 }
 
-.space-paragraph {
-  color: var(--blue-300);
-  text-align: center;
-}
-
-
 .button-container {
-  text-align: center;
   padding: 120px 0;
 }
 

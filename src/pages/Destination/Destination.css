@@ -21,6 +21,7 @@
 .destination-tab li {
   height: 100%;
   border-bottom: 3px solid transparent;
+  transition: border-bottom-color 0.5s ease;
 }
 
 .destination-tab .active li {
@@ -28,14 +29,36 @@
   border-bottom: 3px solid white;
 }
 
-/* .destination-tab li:hover {
+.destination-tab li:hover {
+  color: var(--white);
   border-bottom: 3px solid rgba(255, 255, 255, 50%);
-} */
+}
+
+.destination-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.destination-text h1 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.destination-data .distance {
+  margin-bottom: 24px;
+}
+
+.destination-data h2 {
+  margin-bottom: 12px;
+}
 
 
 
 
-@media (min-width: 375px) {
+
+/* Tablet */
+@media (min-width: 768px) {
   .top-content img {
     height: 380px;
     padding: 40px 0;
@@ -43,6 +66,7 @@
   }
 }
 
+/* Desktop */
 /* @media (min-width: 768px) {
 
 } */
