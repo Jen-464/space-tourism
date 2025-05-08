@@ -11,9 +11,16 @@
   font-weight: 400; /* Leave as it bugs out if erased */
 }
 
+.mobile-preset-3 {
+    font-family: "Bellefair", serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
 .mobile-preset-4 {
     font-family: "Bellefair", serif;
     font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .mobile-preset-6 {

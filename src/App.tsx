@@ -27,7 +27,9 @@ function App() {
           <Route path="/destination" element={<Navigate to="/destination/moon" replace />} />
           <Route path="destination/:moon" element={<Destination />} />
 
-          <Route path="crew" element={<Crew />} />
+          <Route path="/crew" element={<Navigate to="/crew/douglas" replace />} />
+          <Route path="crew/:crewmate" element={<Crew />} />
+
           <Route path="technology" element={<Technology />}></Route>
         </Route>
         <Route path="*" element={<NotFound />} />

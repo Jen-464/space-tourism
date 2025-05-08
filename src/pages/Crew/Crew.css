@@ -1,0 +1,34 @@
+.crew-tab-content {
+    padding-top: 40px;
+    margin-bottom: 24px;
+}
+
+.crew-tab-content h2 {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.crew-tab-content h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.crew-tab span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 0 0.5rem; /* 8 + 8 -> 16px in bet*/
+    background-color: steelblue;
+}
+
+.crew-tab .active span {
+    background-color: var(--white);
+}
+
+.crew-img {
+    height: auto;
+    width: 270px;
+}

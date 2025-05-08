@@ -7,21 +7,19 @@ import "../Destination/Destination.css"
 const Destination = () => {
     const location = useLocation();
     const tabName = location.pathname.split("/").pop();
-    const currentTab = tabName === "destination" ? "moon" : tabName;
 
     let index = 0;
-    if (currentTab == "mars") {
+    if (tabName == "mars") {
         index = 1;
-    } else if (currentTab == "europa") {
+    } else if (tabName == "europa") {
         index = 2;
-    } else if (currentTab == "titan") {
+    } else if (tabName == "titan") {
         index = 3;
     } else {
         index = 0;
     }
 
     const destination = data["destinations"][index];
-    console.log(location);
 
     return (
         <section>
@@ -30,7 +28,7 @@ const Destination = () => {
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">
-                        <img src={destination.images.png} alt="Image of a moon" />
+                        <img className="destination-img" src={destination.images.png} alt="Image of a moon" />
                     </div>
                     <div className="bottom-content">
                         <div className="destination-tab">

@@ -1,4 +1,4 @@
-.top-content img {
+.destination-img {
   height: 200px;
   width: auto;
   padding: 30px 0;
@@ -52,10 +52,6 @@
 .destination-data h2 {
   margin-bottom: 12px;
 }
-
-
-
-
 
 /* Tablet */
 @media (min-width: 768px) {
