@@ -15,8 +15,7 @@ const Nav = () => {
         <>
             <header>
                 <div>
-                    {/* NavLink to="."? */}
-                    <a href="/"><img src={logoImg} alt="space tourism star logo in white circle" className="logo-image"/></a>
+                    <NavLink to="."><img src={logoImg} alt="space tourism star logo in white circle" className="logo-image"/></NavLink>
                     <img src={lineImg} alt="literally just a line for aesthetic purposes" className="line-image"/>
                 </div>
                 <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded={isNavVisible} onClick={toggleNav}>

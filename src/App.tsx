@@ -30,7 +30,9 @@ function App() {
           <Route path="/crew" element={<Navigate to="/crew/douglas" replace />} />
           <Route path="crew/:crewmate" element={<Crew />} />
 
-          <Route path="technology" element={<Technology />}></Route>
+          <Route path="/technology" element={<Navigate to="/technology/launch" replace />} />
+          <Route path="technology/:terminology" element={<Technology />} />
+
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

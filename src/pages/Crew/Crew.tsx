@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom"
 import data from "../../data/data.json"
-// import lineImg from "/assets/shared/line.svg"
 import "../pages.css"
 import "../Crew/Crew.css"
 
@@ -34,10 +33,10 @@ const Crew = () => {
                             <p className="mobile-preset-9"> {crew.bio} </p>
                         </div>
                         <div className="crew-tab">
-                            <NavLink to="/crew/douglas" className={({ isActive }) => `mobile-preset-8 ${isActive ? "active" : ""}`}><span></span></NavLink>
-                            <NavLink to="/crew/mark" className="mobile-preset-8"><span></span></NavLink>
-                            <NavLink to="/crew/victor" className="mobile-preset-8"><span></span></NavLink>
-                            <NavLink to="/crew/ansari" className="mobile-preset-8"><span></span></NavLink>
+                            <NavLink to="/crew/douglas" className={({ isActive }) => `${isActive ? "active" : ""}`}><span></span></NavLink>
+                            <NavLink to="/crew/mark"><span></span></NavLink>
+                            <NavLink to="/crew/victor"><span></span></NavLink>
+                            <NavLink to="/crew/ansari"><span></span></NavLink>
                         </div>
                     </div>
                     <div className="bottom-content">
