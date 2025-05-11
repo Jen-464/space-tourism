@@ -25,8 +25,18 @@ section {
   color: var(--blue-900);
   text-transform: uppercase;
   font-weight: 300;
+  transition: box-shadow 0.5s ease;
 }
 
+.explore-btn:hover {
+  box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
+  color: rgba(12, 14, 24, 0.5);
+  overflow: visible;
+}
+
+
+
+/* Tablet */
 @media (min-width: 768px) {
   section {
     padding: var(--space-1600) var(--space-500);
@@ -39,28 +49,36 @@ section {
   }
 }
 
-@media (min-width: 1100px) {
+/* Laptop */
+@media (min-width: 1024px) {
   section {
-    padding: var(--space-1600) 165px;
+    padding: var(--space-1600) 10%;
+  }
+  .home-main {
+    position: relative;
+    margin: 10vh auto 0 auto;
+    max-width: 1110px;
+    display: flex;
+    overflow: visible;
+
   }
   .text-container {
     align-items: flex-start;
     justify-content: flex-end;
     padding: 0;
     width: 50%;
-    min-width: 450px;
-    z-index: 1;
-  }
-  .home-main {
-    position: relative;
-    margin-top: 10vh;
-    display: flex;
-    /* background-color: steelblue; */
+    min-width: 500px;
+    text-align: left;
   }
   .button-container {
     padding: 0;
     position: absolute;
     right: 0;
-    transform: translateY(10%);
+    top: 50%;
+    translate: 0 -50%;
+    overflow: visible;
+  }
+  .explore-btn {
+    width: 17rem;
   }
 }

@@ -130,7 +130,7 @@ main {
 }
 
 /* Desktop */
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
     .subpage-sections {
         padding: 48px 0;
     }
