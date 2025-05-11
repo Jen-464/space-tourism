@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom"
 import data from "../../data/data.json"
-import ScreenSize from "../../data/ScreenSize";
+import useScreenSize from "../../data/ScreenSize";
 import lineImg from "/assets/shared/line.svg"
 import "../pages.css"
 import "../Destination/Destination.css"
@@ -8,7 +8,7 @@ import "../Destination/Destination.css"
 const Destination = () => {
     const location = useLocation();
     const tabName = location.pathname.split("/").pop();
-    const screenWidth = ScreenSize();
+    const screenWidth = useScreenSize();
     const isMobile = screenWidth < 768;
 
     let index = 0;
@@ -23,6 +23,10 @@ const Destination = () => {
     }
 
     const destination = data["destinations"][index];
+
+    let pageTitleClass = isMobile ? 'mobile-preset-6' : 'tablet-preset-5';
+    pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
+    console.log(pageTitleClass)
     const tabClassName = isMobile ? 'mobile-preset-8' : 'desktop-preset-8';
     let h1ClassName = isMobile ? 'mobile-preset-2' : 'tablet-preset-2';
     h1ClassName = screenWidth >= 1024 ? 'desktop-preset-2' : h1ClassName;
@@ -34,7 +38,7 @@ const Destination = () => {
     return (
         <section>
             <main>
-                <div className="page-title mobile-preset-6"> <span aria-hidden="true"> 01 </span> PICK YOUR DESTINATION </div>
+                <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 01 </span> PICK YOUR DESTINATION </div>
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">

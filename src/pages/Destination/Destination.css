@@ -60,6 +60,23 @@
     padding: 40px 0;
     /* width: auto; */
   }
+  .destination-tab {
+    margin-top: 12px;
+  }
+  .destination-data {
+    display: flex;
+    gap: 24px;
+    /* border: 2px solid yellow; */
+  }
+  .destination-data .distance {
+    /* border: 2px solid red; */
+    margin: 0;
+    width: 50%;
+  }
+  .destination-data .travel {
+    width: 50%;
+    /* border: 2px solid rgb(0, 255, 238); */
+  }
 }
 
 /* Desktop */

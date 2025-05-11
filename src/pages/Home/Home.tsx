@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import ScreenSize from "../../data/ScreenSize";
+import useScreenSize from "../../data/ScreenSize";
 import "../pages.css"
 import "../Home/Home.css"
 
 const Home = () => {
-    const screenWidth = ScreenSize();
+    const screenWidth = useScreenSize();
     const isMobile = screenWidth < 768;
 
     const h2ClassName = isMobile ? 'mobile-preset-6' : 'desktop-preset-5';

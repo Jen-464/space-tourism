@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom"
-import ScreenSize from "../../data/ScreenSize"
+import useScreenSize from "../../data/ScreenSize"
 import data from "../../data/data.json"
 import "../pages.css"
 import "../Technology/Technology.css"
@@ -7,7 +7,7 @@ import "../Technology/Technology.css"
 const Crew = () => {
     const location = useLocation();
     const tabName = location.pathname.split("/").pop();
-    const screenWidth = ScreenSize();
+    const screenWidth = useScreenSize();
     const isMobile = screenWidth < 768;
 
     let index = 0;
