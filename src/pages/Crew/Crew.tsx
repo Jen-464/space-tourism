@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom"
+import ScreenSize from "../../data/ScreenSize"
 import data from "../../data/data.json"
 import "../pages.css"
 import "../Crew/Crew.css"
@@ -6,6 +7,8 @@ import "../Crew/Crew.css"
 const Crew = () => {
     const location = useLocation();
     const tabName = location.pathname.split("/").pop();
+    const screenWidth = ScreenSize();
+    const isMobile = screenWidth < 768;
 
     let index = 0;
     if (tabName == "mark") {
@@ -19,6 +22,13 @@ const Crew = () => {
     }
 
     const crew = data["crew"][index];
+    let h2ClassName = isMobile ? 'mobile-preset-4' : 'tablet-preset-4';
+    h2ClassName = screenWidth >= 1024 ? 'desktop-preset-4' : h2ClassName;
+    let h1ClassName = isMobile ? 'mobile-preset-3' : 'tablet-preset-3';
+    h1ClassName = screenWidth >= 1024 ? 'desktop-preset-3' : h1ClassName;
+    let pClassName = isMobile ? 'mobile-preset-9' : 'tablet-preset-9';
+    pClassName = screenWidth >= 1024 ? 'desktop-preset-9' : pClassName;
+
 
     return (
         <section>
@@ -28,9 +38,9 @@ const Crew = () => {
                     {/* Content below specific to this page */}
                     <div className="top-content">
                         <div className="crew-tab-content">
-                            <h2 className="mobile-preset-4"> {crew.role} </h2>
-                            <h1 className="mobile-preset-3"> {crew.name} </h1>
-                            <p className="mobile-preset-9"> {crew.bio} </p>
+                            <h2 className={h2ClassName}> {crew.role} </h2>
+                            <h1 className={h1ClassName}> {crew.name} </h1>
+                            <p className={pClassName}> {crew.bio} </p>
                         </div>
                         <div className="crew-tab">
                             <NavLink to="/crew/douglas" className={({ isActive }) => `${isActive ? "active" : ""}`}><span></span></NavLink>

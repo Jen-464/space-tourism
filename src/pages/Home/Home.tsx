@@ -1,36 +1,17 @@
-import { NavLink } from "react-router-dom"
-import { useState, useEffect } from 'react';
+import { NavLink } from "react-router-dom";
+import ScreenSize from "../../data/ScreenSize";
 import "../pages.css"
 import "../Home/Home.css"
 
 const Home = () => {
+    const screenWidth = ScreenSize();
+    const isMobile = screenWidth < 768;
 
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-      const handleResize = () => setScreenWidth(window.innerWidth);
-      window.addEventListener('resize', handleResize);
-      handleResize();
-  
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
-  
-    let h2ClassName = 'mobile-preset-6';
-    let h1ClassName = 'mobile-preset-1';
-    let pClassName = 'mobile-preset-9';
-    let btnClassName = 'mobile-preset-4';
-    
-    if (screenWidth < 768) {
-        h2ClassName = 'mobile-preset-6';
-        h1ClassName = 'mobile-preset-1';
-        pClassName = 'mobile-preset-9';
-        btnClassName = 'mobile-preset-4';
-    } else {
-        h2ClassName = 'desktop-preset-5';
-        h1ClassName = 'desktop-preset-1';
-        pClassName = 'tablet-preset-9';
-        btnClassName = 'desktop-preset-4';
-    } 
+    const h2ClassName = isMobile ? 'mobile-preset-6' : 'desktop-preset-5';
+    const h1ClassName = isMobile ? 'mobile-preset-1' : 'desktop-preset-1';
+    let pClassName = isMobile ? 'mobile-preset-9' : 'tablet-preset-9';
+    pClassName = screenWidth >= 1024 ? 'desktop-preset-9' : pClassName;
+    const btnClassName = isMobile ? 'mobile-preset-4' : 'desktop-preset-4';
 
     return (
         <>

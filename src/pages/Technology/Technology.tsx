@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom"
+import ScreenSize from "../../data/ScreenSize"
 import data from "../../data/data.json"
 import "../pages.css"
 import "../Technology/Technology.css"
@@ -6,6 +7,8 @@ import "../Technology/Technology.css"
 const Crew = () => {
     const location = useLocation();
     const tabName = location.pathname.split("/").pop();
+    const screenWidth = ScreenSize();
+    const isMobile = screenWidth < 768;
 
     let index = 0;
     if (tabName == "spaceport") {
@@ -17,6 +20,13 @@ const Crew = () => {
     }
 
     const technology = data["technology"][index];
+    let tabClassName = isMobile ? 'mobile-preset-4' : 'tablet-preset-4';
+    tabClassName = screenWidth >= 1024 ? 'desktop-preset-4' : tabClassName;
+    let h1ClassName = isMobile ? 'mobile-preset-3' : 'tablet-preset-3';
+    h1ClassName = screenWidth >= 1024 ? 'desktop-preset-3' : h1ClassName;
+    let pClassName = isMobile ? 'mobile-preset-9' : 'tablet-preset-9';
+    pClassName = screenWidth >= 1024 ? 'desktop-preset-9' : pClassName;
+
 
     return (
         <section>
@@ -29,14 +39,14 @@ const Crew = () => {
                     </div>
                     <div className="bottom-content">
                         <div className="technology-tab">
-                            <NavLink to="/technology/launch" className={({ isActive }) => `mobile-preset-4 ${isActive ? "active" : ""}`}><span>1</span></NavLink>
-                            <NavLink to="/technology/spaceport" className="mobile-preset-4"><span>2</span></NavLink>
-                            <NavLink to="/technology/capsule" className="mobile-preset-4"><span>3</span></NavLink>
+                            <NavLink to="/technology/launch" className={({ isActive }) => `${tabClassName} ${isActive ? "active" : ""}`}><span>1</span></NavLink>
+                            <NavLink to="/technology/spaceport" className={tabClassName}><span>2</span></NavLink>
+                            <NavLink to="/technology/capsule" className={tabClassName}><span>3</span></NavLink>
                         </div>
                         <div className="technology-tab-content">
-                            <h2 className="mobile-preset-4"> THE TERMINOLOGY... </h2>
-                            <h1 className="mobile-preset-3"> {technology.name} </h1>
-                            <p className="mobile-preset-9"> {technology.description} </p>
+                            <h2 className={tabClassName}> THE TERMINOLOGY... </h2>
+                            <h1 className={h1ClassName}> {technology.name} </h1>
+                            <p className={pClassName}> {technology.description} </p>
                         </div>
                     </div>
                     {/* Content above specific to this page */}
