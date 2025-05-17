@@ -38,7 +38,7 @@ const Destination = () => {
         <section>
             <main>
                 <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 01 </span> PICK YOUR DESTINATION </div>
-                <div className="page-content">
+                <div className="page-content destination-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">
                         <img className="destination-img" src={destination.images.png} alt="Image of a moon" />
@@ -56,7 +56,7 @@ const Destination = () => {
                                 <p className={pClassName}> {destination.description} </p>
                             </div>
 
-                            <img src={lineImg} alt="literally just a line for aesthetic purposes" aria-hidden="true"/>
+                            <img src={lineImg} alt="literally just a line for aesthetic purposes" aria-hidden="true" />
 
                             <div className="destination-data">
                                 <div className="distance">

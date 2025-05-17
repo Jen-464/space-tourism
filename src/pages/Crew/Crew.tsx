@@ -1,4 +1,5 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
+import { useSwipeable } from "react-swipeable"
 import useScreenSize from "../../data/ScreenSize"
 import data from "../../data/data.json"
 import "../pages.css"
@@ -6,22 +7,45 @@ import "../Crew/Crew.css"
 
 const Crew = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const tabName = location.pathname.split("/").pop();
     const screenWidth = useScreenSize();
     const isMobile = screenWidth < 768;
 
-    let index = 0;
-    if (tabName == "mark") {
-        index = 1;
-    } else if (tabName == "victor") {
-        index = 2;
-    } else if (tabName == "ansari") {
-        index = 3;
-    } else {
-        index = 0;
-    }
-
+    const crewNames = ["douglas", "mark", "victor", "ansari"];
+    let index = crewNames.indexOf(tabName ?? "douglas");
+    if (index === -1) index = 0;
     const crew = data["crew"][index];
+    console.log(crew);
+
+    // Handle swipe gestures
+    const handlers = useSwipeable({
+        onSwipedLeft: () => {
+            if (index < crewNames.length - 1) {
+                navigate(`/crew/${crewNames[index + 1]}`);
+            }
+        },
+        onSwipedRight: () => {
+            if (index > 0) {
+                navigate(`/crew/${crewNames[index - 1]}`);
+            }
+        },
+        trackTouch: true,
+        preventScrollOnSwipe: true
+    });
+
+    // let index = 0;
+    // if (tabName == "mark") {
+    //     index = 1;
+    // } else if (tabName == "victor") {
+    //     index = 2;
+    // } else if (tabName == "ansari") {
+    //     index = 3;
+    // } else {
+    //     index = 0;
+    // }
+
+    // const crew = data["crew"][index];
 
     let pageTitleClass = isMobile ? 'mobile-preset-6' : 'tablet-preset-5';
     pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
@@ -34,9 +58,9 @@ const Crew = () => {
     pClassName = screenWidth >= 1024 ? 'desktop-preset-9' : pClassName;
 
     return (
-        <section>
+        <section {...handlers}>
             <main>
-            <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 02 </span> PICK YOUR CREW </div>
+                <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 02 </span> PICK YOUR CREW </div>
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">
@@ -53,7 +77,9 @@ const Crew = () => {
                         </div>
                     </div>
                     <div className="bottom-content">
-                        <img className="crew-img" src={crew.images.png} alt="Image of your crewmates" />
+                        <div className="bottom-img-content">
+                            <img className="crew-img" src={crew.images.png} alt="Image of your crewmates" />
+                        </div>
                     </div>
                     {/* Content above specific to this page */}
                 </div>

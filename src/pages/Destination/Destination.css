@@ -1,6 +1,5 @@
 .destination-img {
-  height: 200px;
-  width: auto;
+  width: 150px;
   padding: 30px 0;
 }
 
@@ -55,8 +54,8 @@
 
 /* Tablet */
 @media (min-width: 768px) {
-  .top-content img {
-    height: 380px;
+  .destination-img {
+    width: 300px;
     padding: 40px 0;
   }
   .destination-tab {
@@ -77,10 +76,25 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .destination-content {
+    padding: 130px 0px;
+    }
+  .destination-img {
+    width: 100%;
+    max-width: 480px;
+    padding: auto 32px;
+  }
   .destination-tab {
     justify-content: flex-start;
+    margin-top: 0px;
+    margin-bottom: 40px;
   }
   .destination-tab-content {
     text-align: left;
+    gap: 40px;
+  }
+  .destination-tab, .destination-tab-content {
+    margin-left: 22px;
+    margin-right: 22px;
   }
 }

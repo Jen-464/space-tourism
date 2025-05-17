@@ -21,14 +21,39 @@
     height: 10px;
     border-radius: 100%;
     margin: 0 0.5rem; /* 8 + 8 -> 16px in bet*/
-    background-color: steelblue;
+    background-color: rgba(151, 151, 151, 0.2);
 }
 
 .crew-tab .active span {
     background-color: var(--white);
 }
 
+.crew-tab span:hover {
+    background-color: rgba(151, 151, 151, 0.5);
+}
+
+.bottom-img-content {
+    position: relative;
+}
+
+.bottom-img-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #0c0e17); 
+  }
+
 .crew-img {
     height: auto;
     width: 270px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .crew-tab-content {
+        text-align: left;
+    }
 }
