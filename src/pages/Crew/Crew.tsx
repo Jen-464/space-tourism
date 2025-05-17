@@ -22,6 +22,10 @@ const Crew = () => {
     }
 
     const crew = data["crew"][index];
+
+    let pageTitleClass = isMobile ? 'mobile-preset-6' : 'tablet-preset-5';
+    pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
+
     let h2ClassName = isMobile ? 'mobile-preset-4' : 'tablet-preset-4';
     h2ClassName = screenWidth >= 1024 ? 'desktop-preset-4' : h2ClassName;
     let h1ClassName = isMobile ? 'mobile-preset-3' : 'tablet-preset-3';
@@ -29,11 +33,10 @@ const Crew = () => {
     let pClassName = isMobile ? 'mobile-preset-9' : 'tablet-preset-9';
     pClassName = screenWidth >= 1024 ? 'desktop-preset-9' : pClassName;
 
-
     return (
         <section>
             <main>
-                <div className="page-title mobile-preset-6"> <span aria-hidden="true"> 02 </span> PICK YOUR CREW </div>
+            <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 02 </span> PICK YOUR CREW </div>
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">

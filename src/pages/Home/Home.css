@@ -60,7 +60,6 @@ section {
     max-width: 1110px;
     display: flex;
     overflow: visible;
-
   }
   .text-container {
     align-items: flex-start;

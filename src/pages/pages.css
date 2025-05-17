@@ -49,4 +49,8 @@ main {
     .page-content {
         flex-direction: row;
     }
+    .top-content {
+        align-items: flex-start;
+        min-width: 50%;
+      }
 }

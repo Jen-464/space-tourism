@@ -20,6 +20,9 @@ const Crew = () => {
     }
 
     const technology = data["technology"][index];
+
+    let pageTitleClass = isMobile ? 'mobile-preset-6' : 'tablet-preset-5';
+    pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
     let tabClassName = isMobile ? 'mobile-preset-4' : 'tablet-preset-4';
     tabClassName = screenWidth >= 1024 ? 'desktop-preset-4' : tabClassName;
     let h1ClassName = isMobile ? 'mobile-preset-3' : 'tablet-preset-3';
@@ -31,7 +34,7 @@ const Crew = () => {
     return (
         <section>
             <main>
-                <div className="page-title mobile-preset-6"> <span aria-hidden="true"> 03 </span> SPACE LAUNCH 101 </div>
+                <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 03 </span> SPACE LAUNCH 101 </div>
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">

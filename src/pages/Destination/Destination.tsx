@@ -26,7 +26,6 @@ const Destination = () => {
 
     let pageTitleClass = isMobile ? 'mobile-preset-6' : 'tablet-preset-5';
     pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
-    console.log(pageTitleClass)
     const tabClassName = isMobile ? 'mobile-preset-8' : 'desktop-preset-8';
     let h1ClassName = isMobile ? 'mobile-preset-2' : 'tablet-preset-2';
     h1ClassName = screenWidth >= 1024 ? 'desktop-preset-2' : h1ClassName;
