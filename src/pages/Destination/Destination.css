@@ -23,14 +23,14 @@
   transition: border-bottom-color 0.5s ease;
 }
 
-.destination-tab .active li {
-  color: var(--white);
-  border-bottom: 3px solid white;
-}
-
 .destination-tab li:hover {
   color: var(--white);
   border-bottom: 3px solid rgba(255, 255, 255, 50%);
+}
+
+.destination-tab .active li {
+  color: var(--white);
+  border-bottom: 3px solid white;
 }
 
 .destination-tab-content {

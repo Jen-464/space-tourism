@@ -24,12 +24,12 @@
     background-color: rgba(151, 151, 151, 0.2);
 }
 
-.crew-tab .active span {
-    background-color: var(--white);
-}
-
 .crew-tab span:hover {
     background-color: rgba(151, 151, 151, 0.5);
+}
+
+.crew-tab a.active span {
+    background-color: var(--white);
 }
 
 .bottom-img-content {
