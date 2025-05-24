@@ -29,6 +29,7 @@ const Crew = () => {
     h1ClassName = screenWidth >= 1024 ? 'desktop-preset-3' : h1ClassName;
     let pClassName = isMobile ? 'mobile-preset-9' : 'tablet-preset-9';
     pClassName = screenWidth >= 1024 ? 'desktop-preset-9' : pClassName;
+    const imageClassName = screenWidth <= 768 ? technology.images.landscape : technology.images.portrait;
 
 
     return (
@@ -38,7 +39,9 @@ const Crew = () => {
                 <div className="page-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">
-                        <img className="technology-img" src={technology.images.landscape} alt="Image of your crewmates" />
+                        <div className="technology-img">
+                            <img src={imageClassName} alt="Image of your crewmates" />
+                        </div>
                     </div>
                     <div className="bottom-content">
                         <div className="technology-tab">

@@ -1,9 +1,15 @@
 .technology-img {
-    height: auto;
-    width: 768px;
     margin-top: 64px;
-    /* background-position: center; */
-    /* overflow: visible; */
+    height: 250px;
+}
+
+.technology-img img {
+    height: 250px;
+    width: 100vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
 }
 
 .technology-tab {
@@ -18,7 +24,11 @@
     justify-content: center;
     align-items: center;
     color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.technology-tab span:hover {
+    border: 1px solid var(--white);
 }
 
 .technology-tab .active span {
@@ -40,12 +50,8 @@
     text-transform: uppercase;
 }
 
-
-
-
-
-
-/* .crew-tab .active span {
-    background-color: var(--white);
-} */
-
+@media (min-width: 768px) {
+    .technology-img, .technology-img img {
+        height: 350px;
+    }
+}
