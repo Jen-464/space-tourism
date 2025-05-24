@@ -34,19 +34,6 @@ const Crew = () => {
         preventScrollOnSwipe: true
     });
 
-    // let index = 0;
-    // if (tabName == "mark") {
-    //     index = 1;
-    // } else if (tabName == "victor") {
-    //     index = 2;
-    // } else if (tabName == "ansari") {
-    //     index = 3;
-    // } else {
-    //     index = 0;
-    // }
-
-    // const crew = data["crew"][index];
-
     let pageTitleClass = isMobile ? 'mobile-preset-6' : 'tablet-preset-5';
     pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
 

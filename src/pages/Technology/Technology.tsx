@@ -25,6 +25,7 @@ const Crew = () => {
     pageTitleClass = screenWidth >= 1024 ? 'desktop-preset-5' : pageTitleClass;
     let tabClassName = isMobile ? 'mobile-preset-4' : 'tablet-preset-4';
     tabClassName = screenWidth >= 1024 ? 'desktop-preset-4' : tabClassName;
+    console.log(tabClassName)
     let h1ClassName = isMobile ? 'mobile-preset-3' : 'tablet-preset-3';
     h1ClassName = screenWidth >= 1024 ? 'desktop-preset-3' : h1ClassName;
     let pClassName = isMobile ? 'mobile-preset-9' : 'tablet-preset-9';

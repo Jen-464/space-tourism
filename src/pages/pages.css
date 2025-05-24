@@ -1,5 +1,5 @@
 section {
-    padding: 24px;
+    padding: var(--space-300);
 }
 
 main {
@@ -26,6 +26,9 @@ main {
 
 /* Tablet */
 @media (min-width: 768px) {
+    section {
+        padding: var(--space-500);
+    }
     .subpage-sections {
         padding: 40px;
     }
@@ -40,6 +43,9 @@ main {
 
 /* Desktop */
 @media (min-width: 1024px) {
+    section {
+        padding: var(--space-600) 0;
+    }
     .subpage-sections {
         padding: 48px 0;
     }

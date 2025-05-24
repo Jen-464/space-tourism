@@ -50,8 +50,28 @@
     text-transform: uppercase;
 }
 
+/* Tablet */
 @media (min-width: 768px) {
     .technology-img, .technology-img img {
         height: 350px;
+    }
+    .technology-tab span{
+        width: 56px;
+        height: 56px;
+    }
+    .technology-tab-content {
+        max-width: 512px;
+        margin: 0 auto;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    /* .technology-img, .technology-img img {
+        height: 350px;
+    } */
+    .technology-tab span{
+        width: 80px;
+        height: 80px;
     }
 }

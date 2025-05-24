@@ -54,6 +54,26 @@
 /* Tablet */
 @media (min-width: 768px) {
     .crew-tab-content {
-        text-align: left;
+        max-width: 512px;
+        text-align: center;
+        margin: 0 auto 24px;
+    }
+    .crew-tab-content h2 {
+        margin-bottom: 1rem;
+    }
+    .bottom-img-content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 464px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .bottom-img-content img {
+        height: 500px;
+        width: auto;
+    }
+    .bottom-img-content::after {
+        content: none;
     }
 }

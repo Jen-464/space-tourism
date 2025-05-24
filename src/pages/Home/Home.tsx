@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <>
-            <section>
+            <section className="home-section">
                 <main className="home-main">
                     <div className="text-container">
                         <h2 className={`${h2ClassName} space-subtitle`}> So, you want to travel to </h2>

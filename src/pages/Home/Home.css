@@ -1,5 +1,5 @@
-section {
-  padding: var(--space-300);
+.home-section {
+  padding: var(--space-1600) var(--space-500);
 }
 
 .text-container {
@@ -38,8 +38,8 @@ section {
 
 /* Tablet */
 @media (min-width: 768px) {
-  section {
-    padding: var(--space-1600) var(--space-500);
+  .home-section {
+    padding: 128px 48px;
   }
   .text-container {
     padding: 0 88px;
@@ -51,9 +51,6 @@ section {
 
 /* Laptop */
 @media (min-width: 1024px) {
-  section {
-    padding: var(--space-1600) 10%;
-  }
   .home-main {
     position: relative;
     margin: 10vh auto 0 auto;
