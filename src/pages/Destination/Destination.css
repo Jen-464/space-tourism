@@ -76,6 +76,10 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .destination-main {
+    margin: 0 auto;
+    max-width: 1110px;
+  }
   .destination-content {
     padding: 130px 0px;
     }

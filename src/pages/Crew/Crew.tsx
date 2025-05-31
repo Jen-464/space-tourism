@@ -46,11 +46,11 @@ const Crew = () => {
 
     return (
         <section {...handlers}>
-            <main>
+            <main className="crew-main">
                 <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 02 </span> PICK YOUR CREW </div>
                 <div className="page-content">
                     {/* Content below specific to this page */}
-                    <div className="top-content">
+                    <div className="top-content crew-top-content">
                         <div className="crew-tab-content">
                             <h2 className={h2ClassName}> {crew.role} </h2>
                             <h1 className={h1ClassName}> {crew.name} </h1>
@@ -63,7 +63,7 @@ const Crew = () => {
                             <NavLink to="/crew/ansari"><span></span></NavLink>
                         </div>
                     </div>
-                    <div className="bottom-content">
+                    <div className="bottom-content crew-bottom-content">
                         <div className="bottom-img-content">
                             <img className="crew-img" src={crew.images.png} alt="Image of your crewmates" />
                         </div>

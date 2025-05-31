@@ -67,6 +67,21 @@
 
 /* Laptop */
 @media (min-width: 1024px) {
+    .technology-main {
+        max-width: 1275px;
+        margin: 0 0 0 auto;
+        border: 2px solid yellow;
+        /* margin: 0 auto; */
+        /* max-width: 1110px; */
+    }
+    .technology-content {
+        display: flex;
+        flex-direction: row-reverse;
+        border: 3px solid red;
+    }
+    .technology-img img {
+        position: static;
+    }
     /* .technology-img, .technology-img img {
         height: 350px;
     } */

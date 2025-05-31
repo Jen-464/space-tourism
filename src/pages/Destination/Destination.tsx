@@ -36,7 +36,7 @@ const Destination = () => {
 
     return (
         <section>
-            <main>
+            <main className="destination-main">
                 <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 01 </span> PICK YOUR DESTINATION </div>
                 <div className="page-content destination-content">
                     {/* Content below specific to this page */}

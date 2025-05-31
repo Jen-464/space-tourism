@@ -1,6 +1,6 @@
 .crew-tab-content {
     padding-top: 40px;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
 }
 
 .crew-tab-content h2 {
@@ -15,12 +15,12 @@
     margin-bottom: 1.5rem;
 }
 
-.crew-tab span{
+.crew-tab span {
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    margin: 0 0.5rem; /* 8 + 8 -> 16px in bet*/
+    margin: 0 0.5rem; /* 8 + 8 -> 16px in between */
     background-color: rgba(151, 151, 151, 0.2);
 }
 
@@ -69,11 +69,69 @@
         width: 100%;
         overflow: hidden;
     }
-    .bottom-img-content img {
+    .crew-img {
         height: 500px;
         width: auto;
     }
     .bottom-img-content::after {
         content: none;
+    }
+}
+
+/* Desktop */
+@media (min-width:1024px) {
+    .crew-tab-content, .crew-bottom-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .crew-main {
+        margin: 0 auto;
+        max-width: 1110px;
+    }
+    .crew-top-content {
+        display: flex;
+        flex-direction: column;
+        height: 734px;
+    }
+    .crew-tab-content {
+        margin-bottom: 40px;
+        max-width: 100%;
+        text-align: left;
+        flex: 1;
+        padding: 0;
+    }
+    .crew-tab {
+        padding-bottom: 48px;
+        text-align: left;
+        width: 100%;
+    }
+    .crew-tab span {
+        width: 15px;
+        height: 15px;
+        margin-left: 0;
+        margin-right: 2.5rem;
+    }
+    .crew-bottom-content {
+        width: 100%;
+        overflow: visible;
+    }
+    .bottom-img-content {
+        position: relative;
+        height: 676px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: visible;
+    }
+    .crew-img {
+        max-width: 110%;
+        height: auto;
+    }     
+    .bottom-img-content::after {
+        content: '';
+        left: -16px;
+        width: 110%;
     }
 }

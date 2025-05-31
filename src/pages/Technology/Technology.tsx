@@ -35,9 +35,9 @@ const Crew = () => {
 
     return (
         <section>
-            <main>
+            <main className="technology-main">
                 <div className={`page-title ${pageTitleClass}`}> <span aria-hidden="true"> 03 </span> SPACE LAUNCH 101 </div>
-                <div className="page-content">
+                <div className="page-content technology-content">
                     {/* Content below specific to this page */}
                     <div className="top-content">
                         <div className="technology-img">
