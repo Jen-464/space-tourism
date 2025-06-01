@@ -68,25 +68,45 @@
 /* Laptop */
 @media (min-width: 1024px) {
     .technology-main {
-        max-width: 1275px;
+        max-width: 1300px;
         margin: 0 0 0 auto;
-        border: 2px solid yellow;
-        /* margin: 0 auto; */
-        /* max-width: 1110px; */
     }
     .technology-content {
+        height: 736px;
         display: flex;
         flex-direction: row-reverse;
-        border: 3px solid red;
     }
-    .technology-img img {
-        position: static;
+    .technology-content .bottom-content {
+        width: 100%;
+        display: flex;
+        gap: 64px;
     }
-    /* .technology-img, .technology-img img {
-        height: 350px;
-    } */
+    .technology-tab {
+        min-width: 80px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+    }
     .technology-tab span{
         width: 80px;
         height: 80px;
+        margin: 0;
+        padding: 0;
+    }
+    .technology-tab-content {
+        justify-content: center;
+        text-align: left;
+    }
+    .technology-img {
+        margin-top: 68px; /* (736 - 600) // 2 */
+        height: 600px;
+        overflow-y: hidden;
+    }
+    .technology-img img {
+        width: 100%;
+        height: auto;
+        position: relative;
     }
 }
