@@ -68,8 +68,9 @@
 /* Laptop */
 @media (min-width: 1024px) {
     .technology-main {
-        max-width: 1300px;
+        max-width: 1330px;
         margin: 0 0 0 auto;
+        /* padding-left: 64px; */
     }
     .technology-content {
         height: 736px;

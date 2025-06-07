@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Space tourism website solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+### The challenge
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Users should be able to:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [X] View the optimal layout for each of the website's pages depending on their device's screen size
+- [X] See hover states for all interactive elements on the page
+- [X] View each page and be able to toggle between the tabs to see new information
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Screenshot
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<img src="./public/output-mobile.png" width="500px"><br>
+<img src="./public/output-tablet.png" width="500px"><br>
+<img src="./public/output-desktop.png" width="500px"><br>
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Links
+- Live Site URL: [My Solution](https://jen-464.github.io/space-tourism/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - React framework
+
+### What I learned
+
+I learned how to deploy with React / Vite / Typescript which I had been unsuccessful in the past. It was one of the harder challenges I've encountered so far as there were several aspects to take into account: json data, responsivenes, hover / action / focus states, routing elements and the fact that I'm in the process of learning React. The importance of: having a public folder, keeping a consistent folder structure and knowing the order of my stylesheet files, was well ingrained into my brain.
+
+
+### Continued development
+
+As I continue developing, I'd like to understand React and its hooks better as well as use Material UI and GraphQL. For my next challenge, I'm to use Material UI and create reausable components that can be edited for unique instances.
+
+## Author
+
+- Website - [Jennifer Lopez](https://github.com/Jen-464/PortfolioGC)
+- Frontend Mentor - [@Jen-464](https://www.frontendmentor.io/profile/Jen-464)
+- LinkedIn - [@Jen464](https://www.linkedin.com/in/jen464/)
